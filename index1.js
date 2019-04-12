@@ -1,7 +1,6 @@
 let taskList = document.querySelector('ul')
 let taskInput = document.querySelector('input')
 let addButton = document.querySelector('button')
-let checkedIndex = 0
 
 addButton.onclick = function () {
     let taskItem = taskInput.value;
@@ -29,22 +28,21 @@ addButton.onclick = function () {
         deleteButton.onclick = function (e) {
             taskList.removeChild(listItem)
         }
-        
+
         editButton.onclick = function () {
-            listItem.removeChild(checkBox)
-            listItem.removeChild(taskName)
-            listItem.removeChild(deleteButton)
-            listItem.removeChild(editButton)
+            let editlistItem = document.createElement('li')
             let editInput = document.createElement('input')
             editInput.value = taskItem
             let saveButton = document.createElement('button')
             let cancelButton = document.createElement('button')
 
-            listItem.appendChild(editInput)
-            listItem.appendChild(saveButton)
+            editListItem.appendChild(editInput)
+            editListItem.appendChild(saveButton)
             saveButton.textContent = 'Save'
-            listItem.appendChild(cancelButton)
+            editListItem.appendChild(cancelButton)
             cancelButton.textContent = 'Cancel'
+            taskList.appendChild(editlistItem)
+            taskList.replaceChild(editlistItem, listItem)
 
 
             saveButton.onclick = function (e) {
@@ -58,18 +56,6 @@ addButton.onclick = function () {
                 listItem.appendChild(editButton)
                 editButton.textContent = 'Edit Task'
                 taskList.appendChild(listItem)
-            }
-
-            cancelButton.onclick = function () {
-                listItem.replaceChild(checkBox, editInput)
-                listItem.replaceChild(taskName, saveButton)
-                taskName.textContent = taskItem
-                listItem.replaceChild(deleteButton, cancelButton)
-                deleteButton.textContent = 'Delete Task'
-                listItem.appendChild(editButton)
-                editButton.textContent = 'Edit Task'
-                taskList.appendChild(listItem)
-
             }
         }
         taskInput.focus();

@@ -1,9 +1,60 @@
-li {
-    margin-bottom: 10px;
-  }
 
-  li button {
-    font-size: 8px;
-    margin-left: 20px;
-    color: #666;
-  }
+body{
+  background-color: #202020;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: rgba(255,255,255,0.87);
+    font-family: fantasy;
+    font-weight: bolder;
+    text-shadow: 4px 4px 5px gray;
+}
+
+label{
+  color: rgba(255,255,255,0.87);
+  font-family: fantasy;
+  font-size: 36px;
+  margin: 20px 20px 20px 20px;
+}
+
+input{
+    border: 5px solid white;
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 20px 20px 20px 0px;
+    font-size: 20px;
+    font-family: serif;
+
+}
+
+button {
+  border: 5px solid white;
+  background-color: #de4c4a;
+  font-family: fantasy;
+  width: 10%;
+  height: 55px;
+  font-size: 20px;
+  margin: 10px 10px 10px 10px;
+}
+
+li {
+    font-family: fantasy;
+    font: bold;
+    font-size: 40px;
+    color: aliceblue;
+    margin: 20px 20px 20px 20px;
+    border: 5px solid white;
+    padding: 10px 10px 10px 10px;
+}
+
+div{
+  margin: 20px 20px 20px 20px;
+}
+
+input[type=checkbox]{
+  margin: 20px;
+
+
+}
+
